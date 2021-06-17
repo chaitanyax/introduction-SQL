@@ -40,8 +40,7 @@ WHERE birth_date > '1990-01-01'
 ```
 
 > Date format in SQL '1990-01-01' -> 'year-month-day'
-> Where clause conditions 
-
+## Where clause conditions 
 ```
 <> ---> Not Equal
 != ---> Not Equal
