@@ -14,3 +14,40 @@ ORDER BY first_name
 ```sql
 SELECT last_name, first_name, points, points * 10 FROM Customers
 ```
+## Alias
+
+```sql
+SELECT
+  first_name,
+  points,
+  (points + 10) * 100 AS discount_factor
+FROM Customers
+```
+
+## Distinct
+
+```sql
+SELECT DISTINCT state
+FROM Customers
+```
+
+## WHERE
+
+```sql
+SELECT *
+FROM Customers
+WHERE birth_date > '1990-01-01'
+```
+
+> Date format in SQL '1990-01-01' -> 'year-month-day'
+> Where clause conditions 
+
+```
+<> ---> Not Equal
+!= ---> Not Equal
+=  ---> Equal
+>= ---> Greater than Equal
+<= ---> Less than Equal
+<  ---> Less than
+>  ---> Greater than
+```
