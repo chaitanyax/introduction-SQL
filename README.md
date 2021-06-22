@@ -50,3 +50,15 @@ WHERE birth_date > '1990-01-01'
 <  ---> Less than
 >  ---> Greater than
 ```
+## AND, OR and NOT Operators
+> Combining multiple search conditions
+
+```sql
+SELECT *
+FROM Customers
+WHERE birth_date > '1990-01-01' AND points > 1000
+
+SELECT *
+FROM Customers
+WHERE birth_date > '1990-01-01' OR points > 1000 AND state = 'VA'
+```
