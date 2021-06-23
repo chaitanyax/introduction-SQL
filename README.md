@@ -62,3 +62,33 @@ SELECT *
 FROM Customers
 WHERE birth_date > '1990-01-01' OR points > 1000 AND state = 'VA'
 ```
+
+> AND has higer precedence over OR
+
+```sql
+SELECT *
+FROM Customer
+WHERE NOT(birth_date > '1990-01-01' AND points > 1000)
+```
+## IN
+> Used to match the values within a list
+
+```sql
+SELECT *
+FROM Customers
+WHERE state IN('VA', 'FL', 'GA')
+```
+
+```sql
+SELECT *
+FROM Customers
+WHERE state NOT IN('VA', 'FL', 'GA')
+```
+
+```sql
+SELECT *
+FROM Customers
+WHERE state='VA' OR state='FL' OR state='GA'
+```
+
+## BETWEEN
