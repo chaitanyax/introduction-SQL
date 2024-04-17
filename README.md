@@ -1,5 +1,13 @@
 # Introduction to SQL
 
+## Topics Covered
+1. Tables
+2. Relationships
+3. Joins
+4. Subqueries
+5. Regular Expressions
+
+## Key points to remember
 1. Order of Clause is important
 2. Query is case insensitive
 3. -- comment in sql
