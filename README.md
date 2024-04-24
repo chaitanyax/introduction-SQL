@@ -247,3 +247,18 @@ WHERE shipped_date IS NULL OR shipper_id IS NULL;
 ```
 ## ORDER BY Clause
 
+```sql
+SELECT *
+FROM customers
+ORDER BY state, first_name DESC;
+
+SELECT first_name, last_name
+FROM customers
+ORDER BY 1, 2;
+
+SELECT *
+FROM order_items
+WHERE order_id = 2
+ORDER BY quantity * unit_price DESC;
+```
+
