@@ -210,4 +210,22 @@ WHERE last_name REGEXP '[gim]e';
 SELECT *
 FROM customers
 WHERE last_name REGEXP '[a-h]e';
+
+-- Exercise
+
+SELECT * 
+FROM customers
+WHERE first_name REGEXP 'ELKA|AMBUR';
+
+SELECT * 
+FROM customers
+WHERE last_name REGEXP 'EY$|ON$';
+
+SELECT * 
+FROM customers
+WHERE last_name REGEXP '^my|se';
+
+SELECT * 
+FROM customers
+WHERE last_name REGEXP 'b[ru]';
 ```
