@@ -125,6 +125,7 @@ WHERE birth_date BETWEEN '1990-01-01' AND '2000-01-01';
 ## LIKE
 
 > % any number of characters
+
 > _ single character
 
 ```sql
@@ -165,9 +166,13 @@ WHERE phone LIKE '%9'
 ## REGEXP
 
 > ^ beginning
+
 > $ end
+
 > | logical or
+
 > [abdc] charcters in the set
+
 > [a-f] characters ranging from a-f
 
 ```sql
