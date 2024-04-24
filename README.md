@@ -162,3 +162,47 @@ SELECT *
 FROM customers
 WHERE phone LIKE '%9'
 ```
+## REGEXP
+
+> ^ beginning
+> $ end
+> | logical or
+> [abdc] charcters in the set
+> [a-f] characters ranging from a-f
+
+```sql
+-- last name containing feild
+SELECT *
+FROM customers
+WHERE last_name REGEXP 'field';
+
+-- ^ must begin with string
+SELECT *
+FROM customers
+WHERE last_name REGEXP '^field';
+
+-- $ must begin with string
+SELECT *
+FROM customers
+WHERE last_name REGEXP 'field$';
+
+-- multiple search patterns
+SELECT *
+FROM customers
+WHERE last_name REGEXP 'field|mac|rose';
+
+-- should end with field or can contains mac or rose
+SELECT *
+FROM customers
+WHERE last_name REGEXP 'field$|mac|rose';
+
+-- starts with given set of characters and ends with letter e
+SELECT *
+FROM customers
+WHERE last_name REGEXP '[gim]e';
+
+-- characters ranging from a to h and ends with e
+SELECT *
+FROM customers
+WHERE last_name REGEXP '[a-h]e';
+```
