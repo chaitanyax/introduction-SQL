@@ -99,4 +99,66 @@ FROM Customers
 WHERE state='VA' OR state='FL' OR state='GA'
 ```
 
+```sql
+SELECT * FROM products
+WHERE quantity_in_stock IN (49, 38, 72);
+```
+
 ## BETWEEN
+
+```sql
+USE sql_store;
+
+SELECT * 
+FROM customers
+WHERE points >= 1000 AND points <= 3000;
+
+SELECT *
+FROM customers
+WHERE points BETWEEN 1000 AND 3000;
+
+SELECT *
+FROM customers
+WHERE birth_date BETWEEN '1990-01-01' AND '2000-01-01';
+```
+
+## LIKE
+
+> % any number of characters
+> _ single character
+
+```sql
+-- Customers whose last name starts with B
+SELECT *
+FROM customers
+WHERE last_name LIKE 'b%';
+
+-- Customers with name starts with brush
+SELECT *
+FROM customers
+WHERE last_name LIKE 'brush%';
+
+-- Customers with name contains letter b
+SELECT *
+FROM customers
+WHERE last_name LIKE '%b%';
+
+-- Customers with name only two charaters and ends with y
+SELECT *
+FROM customers
+WHERE last_name LIKE '_y';
+
+-- Customers with name with b and 4 characters in between can be anything and ends with letter y
+SELECT *
+FROM customers
+WHERE last_name LIKE 'b____y';
+
+-- Excercise
+SELECT *
+FROM customers
+WHERE address LIKE '%TRAIL%' OR address LIKE '%AVENUE%';
+
+SELECT *
+FROM customers
+WHERE phone LIKE '%9'
+```
