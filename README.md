@@ -229,3 +229,21 @@ SELECT *
 FROM customers
 WHERE last_name REGEXP 'b[ru]';
 ```
+
+## NULL OPERATOR
+
+```sql
+SELECT *
+FROM customers
+WHERE phone IS NULL;
+
+SELECT *
+FROM customers
+WHERE phone IS NOT NULL;
+
+SELECT *
+FROM orders
+WHERE shipped_date IS NULL OR shipper_id IS NULL;
+```
+## ORDER BY Clause
+
