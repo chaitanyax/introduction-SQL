@@ -262,3 +262,17 @@ WHERE order_id = 2
 ORDER BY quantity * unit_price DESC;
 ```
 
+## LIMIT Clause
+
+```sql
+SELECT *
+FROM customers
+LIMIT 3;
+
+-- offset - pick customers after 6th record - pick 3 record
+SELECT *
+FROM customers
+ORDER BY points DESC
+LIMIT 3;
+```
+
