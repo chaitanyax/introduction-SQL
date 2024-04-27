@@ -276,3 +276,35 @@ ORDER BY points DESC
 LIMIT 3;
 ```
 
+## JOINS
+
+```sql
+SELECT order_id, first_name, last_name
+FROM orders o
+JOIN customers c 
+	ON o.customer_id = c.customer_id;
+
+SELECT order_id, name, quantity_in_stock, p.unit_price
+FROM order_items oi
+JOIN products p ON oi.product_id = p.product_id;
+
+-- Joining across multiple databases
+SELECT order_id, name, quantity_in_stock, p.unit_price
+FROM order_items oi
+JOIN sql_inventory.products p ON oi.product_id = p.product_id;
+
+```
+
+## SELF JOIN
+
+```sql
+-- SELF JOINS
+SELECT 
+	e.employee_id, 
+    e.first_name,
+    m.first_name AS manager
+FROM employees e
+JOIN employees m
+	ON e.reports_to = m.employee_id;
+```
+
