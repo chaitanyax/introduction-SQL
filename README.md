@@ -300,11 +300,46 @@ JOIN sql_inventory.products p ON oi.product_id = p.product_id;
 ```sql
 -- SELF JOINS
 SELECT 
-	e.employee_id, 
+    e.employee_id, 
     e.first_name,
     m.first_name AS manager
 FROM employees e
 JOIN employees m
 	ON e.reports_to = m.employee_id;
 ```
+## JOIN Multiple tables
 
+```sql
+SELECT 
+    o.order_id,
+    o.order_date,
+    c.first_name,
+    c.last_name,
+    os.name AS status
+FROM orders o
+JOIN customers c ON c.customer_id = o.customer_id
+JOIN order_statuses os ON o.status = os.order_status_id
+
+SELECT 
+    c.name,
+    p.payment_method,
+    pm.name AS payment_method
+FROM clients c
+JOIN payments p ON c.client_id = p.client_id
+JOIN payment_methods pm ON pm.payment_method_id = p.payment_method;
+```
+
+## COMPOUND JOIN CONDITION
+```sql
+SELECT *
+FROM order_items o
+JOIN order_item_notes oi
+	ON o.order_id = oi.order_id 
+    AND o.product_id = oi.product_id;
+```
+## IMPLICIT JOIN SYNTAX
+```sql
+SELECT *
+FROM customers c, orders o
+WHERE c.customer_id = o.customer_id;
+```
