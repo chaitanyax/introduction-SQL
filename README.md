@@ -12,6 +12,32 @@
 2. Query is case insensitive
 3. -- comment in sql
 
+# SQL Statements Used in the Course
+
+## Data Manipulation Language (DML)
+- `SELECT`
+- `INSERT`
+- `UPDATE`
+- `DELETE`
+- `MERGE`
+
+## Data Definition Language (DDL)
+- `CREATE`
+- `ALTER`
+- `DROP`
+- `RENAME`
+- `TRUNCATE`
+- `COMMENT`
+
+## Data Control Language (DCL)
+- `GRANT`
+- `REVOKE`
+
+## Transaction Control
+- `COMMIT`
+- `ROLLBACK`
+- `SAVEPOINT`
+
 ```sql
 SELECT *
 FROM Customers
