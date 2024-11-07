@@ -12,7 +12,15 @@
 2. Query is case insensitive
 3. -- comment in sql
 
-# SQL Statements Used in the Course
+## Example: Using the `||` Operator for String Concatenation in SQL
+
+```sql
+-- Concatenating strings in SQL using the || operator
+SELECT 'Hello, ' || first_name || ' ' || last_name AS full_greeting
+FROM contacts;
+```
+
+## SQL Statements Used in the Course
 
 ## Data Manipulation Language (DML)
 - `SELECT`
