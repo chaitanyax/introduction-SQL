@@ -12,6 +12,12 @@
 2. Query is case insensitive
 3. -- comment in sql
 
+## Explanation
+The || operator is used in SQL to concatenate strings.
+In this example:
+'Hello, ' is concatenated with first_name and last_name to create a complete greeting.
+The resulting column full_greeting would contain values like "Hello, John Doe" for each record in the contacts table.
+
 ## Example: Using the `||` Operator for String Concatenation in SQL
 
 ```sql
